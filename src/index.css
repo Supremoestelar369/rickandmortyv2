@@ -1,0 +1,271 @@
+/* ********** Customs Properties  ********** */
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Rubik:wght@300;600&display=swap');
+
+:root {
+    --color-White: rgb(56, 214, 16);
+    --color-icon: #2471A3;
+    --regular: 400;
+    --sem-bold: 600;
+    --bold: 700;
+    --position-1: 1;
+    --position-100: 100;
+}
+
+/* ********** Reset  ********** */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Mali', cursive;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+/* ********** Utilities  ********** */
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ********** Site Styles  ********** */
+
+.search-bar {
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url("./assets/imgs/paisaje-digital-en-atardecer-5846.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    align-items: flex-end;
+}
+
+.search-bar__form {
+    width: 30rem;
+    height: 5rem;
+    padding: 2rem;
+    border-radius: 7% 7% 7% 7% / 50% 50% 50% 50%;
+    background-color: #2f3640;
+    justify-content: space-between;
+    position: absolute;
+    top: 2rem;
+}
+
+
+.search-bar__input {
+    width: 17rem;
+    font-weight: var(--regular);
+    color: var(--color-White);
+    background: none;
+    border: none;
+    float: left;
+    line-height: 4rem;
+    outline: none;
+}
+
+.search-bar__btn {
+    background: none;
+    border: none;
+    color: var(--color-icon);
+}
+
+.search-bar_icon {
+    font-size: 1.8rem;
+    font-weight: var(--sem-bold);
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-2rem);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+.icon-animation {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+}
+
+.icon-floating {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #2f3640;
+    animation: float 6s ease-in-out infinite;
+}
+
+.icon-floating-icon {
+    color: var(--color-White);
+    font-size: 4rem;
+}
+
+.main {}
+
+.pagination-container{ 
+}
+
+
+.main__container {
+    background-image: url('./assets/imgs/paisaje-digital-en-atardecer-5846.jpg');
+    background-size: contain;
+    min-height: 100vh;
+    color: var(--color-White);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+/* ***** LOCATION INFORMATION  ***** */
+
+
+.inf-location {
+    width: 100%;
+    padding: 4rem;
+    flex-direction: column;
+    box-shadow: -0.5px -3px 23.5px 14.5px rgba(202, 94, 5, 0.69);
+    background-color: #3d3d3d8f;
+    text-align: center;
+}
+
+.inf-location__subtitle {
+    font-weight: var(--bold);
+    font-size: 3rem;
+}
+
+.inf-location__list-items {
+    list-style: none;
+}
+
+.inf-location_span {
+    font-weight: var(--sem-bold);
+}
+
+.card {
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card__character {
+    margin: 1rem 0;
+    background-color: #d60000;
+    background-image: linear-gradient(315deg, #da098a 0%, #233329 74%);
+    width: 25rem;
+    padding: 3rem 0;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 9px 10px 14px -5.5px #f3f704;
+    line-height: 1.3;
+    position: relative;
+}
+
+.card__status {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    gap: 1rem;
+    min-width: 10rem;
+    max-width: 15rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #f8f4f2;
+    border-radius: .8rem;
+}
+
+.dot {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+
+}
+
+.card__img {
+    margin-top: 1.5rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+@media (min-width: 576px) {
+
+    .icon-animation {
+        display: none;
+    }
+
+    .icon-floating {
+        display: none;
+    }
+
+    .search-bar {
+        min-width: 100%;
+        min-height: 50vh;
+        background-image: url("./assets/imgs/home.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+    }
+
+
+    .search-bar__form{
+        top: 80%;
+    }
+
+    .card {
+        max-width: 98rem;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+
+    .card__character {
+        max-width: 23rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    
+    .search-bar__form {
+        width: 60rem;
+        height: 5rem;
+        padding: 2rem;
+        border-radius: 5% 5% 5% 5% / 50% 50% 50% 50%;
+        background-color: #2f3640;
+        margin-bottom: 5rem;
+        justify-content: space-between;
+    }
+
+    .card {
+        max-width: 130rem;
+
+    }
+}
